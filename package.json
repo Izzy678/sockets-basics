@@ -1,0 +1,14 @@
+{
+  "name": "sockets-basics",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Izzy678/sockets-basics",
+  "author": "Amune Israel <iharmuneh@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "npx tsc && node dist/app.js"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.2"
+  }
+}
