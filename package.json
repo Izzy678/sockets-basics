@@ -1,14 +1,30 @@
 {
-  "name": "sockets-basics",
+  "name": "express-ts",
   "version": "1.0.0",
-  "main": "index.js",
-  "repository": "https://github.com/Izzy678/sockets-basics",
-  "author": "Amune Israel <iharmuneh@gmail.com>",
-  "license": "MIT",
+  "description": "",
+  "main": "app.js",
   "scripts": {
-    "start": "npx tsc && node dist/app.js"
+    "build": "rimraf dist && tsc",
+    "prestart": "yarn build",
+    "start": "node dist/app.js",
+    "preserve": "yarn build",
+    "serve": "concurrently \"tsc -w\"  \"nodemon dist/app.js\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.12.2",
+    "@types/socket.io": "^3.0.2",
+    "concurrently": "^8.2.2",
+    "express": "^4.19.2",
+    "rimraf": "^3.0.2",
+    "socket.io": "^4.7.5",
+    "typescript": "^5.4.3"
   },
   "devDependencies": {
-    "typescript": "^5.4.2"
+    "@types/mime": "^4.0.0",
+    "nodemon": "^2.0.19"
   }
 }
